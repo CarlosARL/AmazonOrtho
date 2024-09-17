@@ -2,7 +2,7 @@
 /* Hero Section */
 #hero {
     position: relative;
-    height: calc(100vh - 80px);
+    height: 60vh;
     min-height: 600px;
     overflow: hidden;
     padding-top: 170px; /* Ajuste este valor conforme a altura do seu header */
