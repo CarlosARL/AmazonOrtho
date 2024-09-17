@@ -1,7 +1,8 @@
+
 /* Hero Section */
 #hero {
     position: relative;
-    height: 1vh;
+    height: calc(100vh - 80px);
     min-height: 600px;
     overflow: hidden;
     padding-top: 80px; /* Ajuste este valor conforme a altura do seu header */
@@ -20,6 +21,46 @@
     justify-content: center;
     text-align: center;
 }
+
+.hero-content {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1 !important;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--background-color);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
 /* Products Preview Section */
 #products-preview {
     background-color: #f8f9fa;
@@ -120,103 +161,6 @@
     color: #fff;
 }
 
-/* Slick slider custom styles */
-.products-slider .slick-prev,
-.products-slider .slick-next {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.products-slider .slick-prev:before,
-.products-slider .slick-next:before {
-    font-size: 20px;
-    opacity: 1;
-    color: #fff;
-}
-
-.products-slider .slick-prev {
-    left: -50px;
-}
-
-.products-slider .slick-next {
-    right: -50px;
-}
-
-.products-slider .slick-dots {
-    bottom: -40px;
-}
-
-.products-slider .slick-dots li button:before {
-    font-size: 12px;
-    color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-    .products-slider .slick-prev,
-    .products-slider .slick-next {
-        display: none !important;
-    }
-}
-.hero-content {
-    max-width: 800px;
-    width: 90%;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1 !important;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    color: var(--background-color);
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.hero-content .btn-primary {
-    font-size: 1.1rem;
-    padding: 12px 30px;
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.hero-content .btn-primary:hover {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .hero-content .btn-primary {
-        font-size: 1rem;
-        padding: 10px 25px;
-    }
-}
 /* About Preview Section */
 #about-preview {
     padding: 100px 0;
@@ -398,40 +342,38 @@
     margin: 0 auto 30px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+/* Slick slider custom styles */
+.products-slider .slick-prev,
+.products-slider .slick-next {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
 
-    .hero-content p {
-        font-size: 1.2rem;
-    }
+.products-slider .slick-prev:before,
+.products-slider .slick-next:before {
+    font-size: 20px;
+    opacity: 1;
+    color: #fff;
+}
 
-    .about-content,
-    .branches-content {
-        flex-direction: column;
-    }
+.products-slider .slick-prev {
+    left: -50px;
+}
 
-    .about-text,
-    .about-image,
-    .branches-text,
-    .branches-map {
-        flex-basis: 100%;
-        margin-bottom: 30px;
-    }
+.products-slider .slick-next {
+    right: -50px;
+}
 
-    .about-text {
-        padding-right: 0;
-    }
+.products-slider .slick-dots {
+    bottom: -40px;
+}
 
-    #map {
-        height: 300px;
-    }
-
-    .experience-number {
-        font-size: 80px;
-    }
+.products-slider .slick-dots li button:before {
+    font-size: 12px;
+    color: var(--primary-color);
 }
 
 /* Animations */
@@ -473,4 +415,94 @@
 
 .scroll-to-top:hover {
     background-color: var(--accent-color);
+}
+
+/* Services Preview Section */
+#services-preview {
+    background-color: var(--light-gray);
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.service-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .hero-content .btn-primary {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .about-content,
+    .branches-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-image,
+    .branches-text,
+    .branches-map {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .experience-number {
+        font-size: 80px;
+    }
+
+    .products-slider .slick-prev,
+    .products-slider .slick-next {
+        display: none !important;
+    }
+    .services-content {
+        grid-template-columns: 1fr;
+    }
 }
