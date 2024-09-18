@@ -61,7 +61,7 @@ nav ul li a.active::after {
 .social-icons a {
     color: var(--background-color);
     font-size: 18px;
-    margin-left: 15px;
+    margin-right: 15px;
     transition: all 0.3s ease;
 }
 
