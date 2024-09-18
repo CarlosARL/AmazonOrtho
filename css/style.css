@@ -10,7 +10,6 @@
     --transition: all 0.3s ease;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -148,27 +147,64 @@ img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Adicionando estilos para melhorar a acessibilidade */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Estilos para melhorar o foco nos elementos interativos */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Estilos para melhorar a legibilidade em dispositivos móveis */
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
     .container {
-        padding: 0 25px;
+        padding: 0 20px;
     }
     
-    h1 { font-size: 2.8rem; }
-    h2 { font-size: 2.3rem; }
-    h3 { font-size: 1.9rem; }
-    h4 { font-size: 1.6rem; }
-    h5 { font-size: 1.4rem; }
-    h6 { font-size: 1.2rem; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; }
     
     .section-padding {
-        padding: 70px 0;
+        padding: 60px 0;
     }
     
     .section-header h2 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     
     .section-header p {
         font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos para melhorar a performance em dispositivos com tela de retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
