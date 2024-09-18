@@ -343,6 +343,19 @@
 }
 
 /* Slick slider custom styles */
+
+
+.slick-dots {
+    position: relative;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
 .products-slider .slick-prev,
 .products-slider .slick-next {
     width: 40px;
@@ -370,6 +383,7 @@
 .products-slider .slick-dots {
     bottom: -40px;
 }
+
 
 .products-slider .slick-dots li button:before {
     font-size: 12px;
