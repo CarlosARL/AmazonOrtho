@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #003756;
+    --secondary-color: #72717D;
+    --accent-color: #E6B54A;
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #4A4A4A;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.75rem; }
+h6 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.75rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.25rem; }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+    }
+}
